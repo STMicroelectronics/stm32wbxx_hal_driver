@@ -23,7 +23,7 @@ This **stm32wbxx_hal_driver** MCU component repo is one element of the STM32Cube
 
 Copyright (c) 2019 STMicroelectronics.
 
-This software component is licensed by STMicroelectronics under BSD 3-Clause license. You may not use this file except in compliance with the License. 
+This software component is licensed by STMicroelectronics under BSD-3-Clause license. You may not use this software except in compliance with the License. 
 You may obtain a copy of the License [here](https://opensource.org/licenses/BSD-3-Clause).
 
 ## Compatibility information
@@ -35,11 +35,12 @@ It is **crucial** that you use a consistent set of versions for the CMSIS Core -
 HAL Driver WB | CMSIS Device WB | CMSIS Core | Was delivered in the full MCU package
 ------------- | --------------- | ---------- | -------------------------------------
 Tag v1.1.0 | Tag v1.1.0 | Tag v4.5_cm4 | Tag v1.1.0 (and following, if any, till next new tag)
+Tag v1.2.0 | Tag v1.2.0 | Tag v5.4.0_cm4 | Tag v1.2.0 (and following, if any, till next new tag)
 
 The full **STM32CubeWB** MCU package is available [here](https://github.com/STMicroelectronics/STM32CubeWB).
 
 ## Troubleshooting
 
-If you have any issue with the **Software content** of this repo, you can [file an issue on Github](https://github.com/STMicroelectronics/stm32wbxx_hal_driver/issues/new).
+If you have any issue with the **Software content** of this repo, you can [file an issue on Github](https://github.com/STMicroelectronics/stm32wbxx_hal_driver/issues/new/choose).
 
 For any other question related to the product, the tools, the environment, you can submit a topic on the [ST Community/STM32 MCUs forum](https://community.st.com/s/group/0F90X000000AXsASAW/stm32-mcus).
