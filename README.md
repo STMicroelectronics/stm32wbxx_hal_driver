@@ -36,6 +36,7 @@ HAL Driver WB | CMSIS Device WB | CMSIS Core | Was delivered in the full MCU pac
 ------------- | --------------- | ---------- | -------------------------------------
 Tag v1.1.0 | Tag v1.1.0 | Tag v4.5_cm4 | Tag v1.1.0 (and following, if any, till next new tag)
 Tag v1.2.0 | Tag v1.2.0 | Tag v5.4.0_cm4 | Tag v1.2.0 (and following, if any, till next new tag)
+Tag v1.3.0 | Tag v1.3.0 | Tag v5.4.0_cm4 | Tag v1.3.0 (and following, if any, till next new tag)
 
 The full **STM32CubeWB** MCU package is available [here](https://github.com/STMicroelectronics/STM32CubeWB).
 
