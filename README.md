@@ -34,10 +34,13 @@ It is **crucial** that you use a consistent set of versions for the CMSIS Core -
 
 HAL Driver WB | CMSIS Device WB | CMSIS Core | Was delivered in the full MCU package
 ------------- | --------------- | ---------- | -------------------------------------
-Tag v1.1.0 | Tag v1.1.0 | Tag v4.5_cm4 | Tag v1.1.0 (and following, if any, till next new tag)
-Tag v1.2.0 | Tag v1.2.0 | Tag v5.4.0_cm4 | Tag v1.2.0 (and following, if any, till next new tag)
-Tag v1.3.0 | Tag v1.3.0 | Tag v5.4.0_cm4 | Tag v1.3.0 (and following, if any, till next new tag)
-Tag v1.4.0 | Tag v1.4.0 | Tag v5.4.0_cm4 | Tag v1.4.0 (and following, if any, till next new tag)
+Tag v1.1.0 | Tag v1.1.0 | Tag v4.5_cm4 | Tag v1.1.0 (and following, if any, till next tag)
+Tag v1.2.0 | Tag v1.2.0 | Tag v5.4.0_cm4 | Tag v1.2.0 (and following, if any, till next tag)
+Tag v1.3.0 | Tag v1.3.0 | Tag v5.4.0_cm4 | Tag v1.3.0 (and following, if any, till next tag)
+Tag v1.4.0 | Tag v1.3.0 | Tag v5.4.0_cm4 | Tag v1.4.0 (and following, if any, till next tag)
+Tag v1.5.0 | Tag v1.4.0 | Tag v5.4.0_cm4 | Tag v1.5.0 (and following, if any, till next tag)
+
+Details about the content of this release are available in the release note [here](https://htmlpreview.github.io/?https://github.com/STMicroelectronics/stm32wbxx_hal_driver/blob/master/Release_Notes.html).
 
 The full **STM32CubeWB** MCU package is available [here](https://github.com/STMicroelectronics/STM32CubeWB).
 
