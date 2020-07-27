@@ -8,12 +8,12 @@
    * The CMSIS modules (core and device) corresponding to the ARM(tm) core implemented in this STM32 product
    * The STM32 HAL-LL drivers : an abstraction drivers layer, the API ensuring maximized portability across the STM32 portfolio
    * The BSP Drivers of each evaluation or demonstration board provided by this STM32 series
-   * A consistent set of middlewares components such as RTOS, USB, FatFS, Graphics, STM32_TouchSensing_Library ...
+   * A consistent set of middlewares components such as RTOS, USB, FatFS, STM32_WPAN ...
    * A full set of software projects (basic examples, applications or demonstrations) for each board provided by this STM32 series
 
 Two models of publication are proposed for the STM32Cube embedded software:
    * The monolithic **MCU Package** : all STM32Cube software modules of one STM32 series are present (Drivers, Middlewares, Projects, Utilities) in the repo (usual name **STM32Cubexx**, xx corresponding to the STM32 series)
-   * The **MCU component** : progressively from November 2019, each STM32Cube software module being part of the STM32Cube MCU Package, will be delivered as an individual repo, allowing the user to select and get only the required software functions.
+   * The **MCU component** : progressively from November 2019, each STM32Cube software module being part of the STM32Cube MCU Package, are delivered as an individual repo, allowing the user to select and get only the required software functions.
 
 ## Description
 
@@ -26,21 +26,26 @@ Copyright (c) 2019 STMicroelectronics.
 This software component is licensed by STMicroelectronics under BSD-3-Clause license. You may not use this software except in compliance with the License. 
 You may obtain a copy of the License [here](https://opensource.org/licenses/BSD-3-Clause).
 
+## Release note
+
+Details about the content of this release are available in the release note [here](https://htmlpreview.github.io/?https://github.com/STMicroelectronics/stm32wbxx_hal_driver/blob/master/Release_Notes.html).
+
+
 ## Compatibility information
 
 In this table, you can find the successive versions of this HAL-LL Driver component, in line with the corresponding versions of the full MCU package:
 
 It is **crucial** that you use a consistent set of versions for the CMSIS Core - CMSIS Device - HAL, as mentioned in this table.
 
-HAL Driver WB | CMSIS Device WB | CMSIS Core | Was delivered in the full MCU package
-------------- | --------------- | ---------- | -------------------------------------
-Tag v1.1.0 | Tag v1.1.0 | Tag v4.5_cm4 | Tag v1.1.0 (and following, if any, till next tag)
-Tag v1.2.0 | Tag v1.2.0 | Tag v5.4.0_cm4 | Tag v1.2.0 (and following, if any, till next tag)
-Tag v1.3.0 | Tag v1.3.0 | Tag v5.4.0_cm4 | Tag v1.3.0 (and following, if any, till next tag)
-Tag v1.4.0 | Tag v1.3.0 | Tag v5.4.0_cm4 | Tag v1.4.0 (and following, if any, till next tag)
-Tag v1.5.0 | Tag v1.4.0 | Tag v5.4.0_cm4 | Tag v1.5.0 (and following, if any, till next tag)
+HAL Driver WB | CMSIS Device WB | CMSIS Core     | Was delivered in the full MCU package
+------------- | --------------- | ----------     | -------------------------------------
+Tag v1.1.0    | Tag v1.1.0      | Tag v4.5_cm4   | Tag v1.1.0 (and following, if any, till next tag)
+Tag v1.2.0    | Tag v1.2.0      | Tag v5.4.0_cm4 | Tag v1.2.0 (and following, if any, till next tag)
+Tag v1.3.0    | Tag v1.3.0      | Tag v5.4.0_cm4 | Tag v1.3.0 (and following, if any, till next tag)
+Tag v1.4.0    | Tag v1.3.0      | Tag v5.4.0_cm4 | Tag v1.4.0 (and following, if any, till next tag)
+Tag v1.5.0    | Tag v1.4.0      | Tag v5.4.0_cm4 | Tag v1.5.0 (and following, if any, till next tag)
+Tag v1.6.0    | Tag v1.5.0      | Tag v5.4.0_cm4 | Tag v1.8.0 (and following, if any, till next tag)
 
-Details about the content of this release are available in the release note [here](https://htmlpreview.github.io/?https://github.com/STMicroelectronics/stm32wbxx_hal_driver/blob/master/Release_Notes.html).
 
 The full **STM32CubeWB** MCU package is available [here](https://github.com/STMicroelectronics/STM32CubeWB).
 
