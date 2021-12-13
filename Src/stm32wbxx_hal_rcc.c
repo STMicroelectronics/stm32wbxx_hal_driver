@@ -1351,7 +1351,7 @@ void HAL_RCC_MCOConfig(uint32_t RCC_MCOx, uint32_t RCC_MCOSource, uint32_t RCC_M
     /* Mask MCOSEL[] and MCOPRE[] bits then set MCO clock source and prescaler */
     LL_RCC_ConfigMCO(RCC_MCOSource, RCC_MCODiv);
   }
-  else if (RCC_MCOx == RCC_MCO2_INDEX)
+  else if (mcoindex == RCC_MCO2_INDEX)
   {
     assert_param(IS_RCC_MCODIV(RCC_MCODiv));
     assert_param(IS_RCC_MCO2SOURCE(RCC_MCOSource));
@@ -1359,7 +1359,7 @@ void HAL_RCC_MCOConfig(uint32_t RCC_MCOx, uint32_t RCC_MCOSource, uint32_t RCC_M
     LL_RCC_ConfigMCO(RCC_MCOSource, RCC_MCODiv);
   }
 #if defined(RCC_MCO3_SUPPORT)
-  else if (RCC_MCOx == RCC_MCO3_INDEX)
+  else if (mcoindex == RCC_MCO3_INDEX)
   {
     assert_param(IS_RCC_MCODIV(RCC_MCODiv));
     assert_param(IS_RCC_MCO3SOURCE(RCC_MCOSource));
