@@ -45,7 +45,7 @@ Tag v1.7.0    | Tag v1.7.0      | Tag v5.6.0_cm4 | Tag v1.10.0 (and following, i
 Tag v1.8.0    | Tag v1.8.0      | Tag v5.6.0_cm4 | Tag v1.11.0 (and following, if any, till next tag)
 Tag v1.9.0    | Tag v1.9.0      | Tag v5.6.0_cm4 | Tag v1.12.0 (and following, if any, till next tag)
 Tag v1.10.0   | Tag v1.10.0     | Tag v5.6.0_cm4 | Tag v1.13.0 (and following, if any, till next tag)
-
+Tag v1.10.1   | Tag v1.10.1     | Tag v5.6.0_cm4 | Tag v1.13.3 (and following, if any, till next tag)
 
 The full **STM32CubeWB** MCU package is available [here](https://github.com/STMicroelectronics/STM32CubeWB).
 
@@ -53,4 +53,4 @@ The full **STM32CubeWB** MCU package is available [here](https://github.com/STMi
 
 If you have any issue with the **software content** of this repository, you can file an issue [here](https://github.com/STMicroelectronics/stm32wbxx_hal_driver/issues/new/choose).
 
-For any other question related to the product, the tools, the environment, you can submit a topic on the [ST Community/STM32 MCUs forum](https://community.st.com/s/topic/0TO0X000000BSqSWAW/stm32-mcus).
+For any other question related to the product, the tools, the environment, you can submit a topic on the [ST Community/STM32 MCUs forum](https://community.st.com/s/group/0F90X000000AXsASAW/stm32-mcus).
