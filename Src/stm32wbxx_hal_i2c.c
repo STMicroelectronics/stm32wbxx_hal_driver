@@ -3332,22 +3332,6 @@ HAL_StatusTypeDef HAL_I2C_IsDeviceReady(I2C_HandleTypeDef *hi2c, uint16_t DevAdd
         __HAL_I2C_CLEAR_FLAG(hi2c, I2C_FLAG_STOPF);
       }
 
-      /* Check if the maximum allowed number of trials has been reached */
-      if (I2C_Trials == Trials)
-      {
-        /* Generate Stop */
-        hi2c->Instance->CR2 |= I2C_CR2_STOP;
-
-        /* Wait until STOPF flag is reset */
-        if (I2C_WaitOnFlagUntilTimeout(hi2c, I2C_FLAG_STOPF, RESET, Timeout, tickstart) != HAL_OK)
-        {
-          return HAL_ERROR;
-        }
-
-        /* Clear STOP Flag */
-        __HAL_I2C_CLEAR_FLAG(hi2c, I2C_FLAG_STOPF);
-      }
-
       /* Increment Trials */
       I2C_Trials++;
     } while (I2C_Trials < Trials);
@@ -6291,8 +6275,7 @@ static void I2C_ITSlaveCplt(I2C_HandleTypeDef *hi2c, uint32_t ITFlags)
   __HAL_I2C_CLEAR_FLAG(hi2c, I2C_FLAG_STOPF);
 
   /* Disable Interrupts and Store Previous state */
-  if ((tmpstate == HAL_I2C_STATE_BUSY_TX) || (tmpstate == HAL_I2C_STATE_BUSY_TX_LISTEN) ||
-      (tmpstate == HAL_I2C_STATE_LISTEN))
+  if ((tmpstate == HAL_I2C_STATE_BUSY_TX) || (tmpstate == HAL_I2C_STATE_BUSY_TX_LISTEN))
   {
     I2C_Disable_IRQ(hi2c, I2C_XFER_LISTEN_IT | I2C_XFER_TX_IT);
     hi2c->PreviousState = I2C_STATE_SLAVE_BUSY_TX;
@@ -6301,6 +6284,11 @@ static void I2C_ITSlaveCplt(I2C_HandleTypeDef *hi2c, uint32_t ITFlags)
   {
     I2C_Disable_IRQ(hi2c, I2C_XFER_LISTEN_IT | I2C_XFER_RX_IT);
     hi2c->PreviousState = I2C_STATE_SLAVE_BUSY_RX;
+  }
+  else if (tmpstate == HAL_I2C_STATE_LISTEN)
+  {
+    I2C_Disable_IRQ(hi2c, I2C_XFER_LISTEN_IT | I2C_XFER_TX_IT | I2C_XFER_RX_IT);
+    hi2c->PreviousState = I2C_STATE_NONE;
   }
   else
   {
@@ -6955,6 +6943,12 @@ static HAL_StatusTypeDef I2C_WaitOnFlagUntilTimeout(I2C_HandleTypeDef *hi2c, uin
 {
   while (__HAL_I2C_GET_FLAG(hi2c, Flag) == Status)
   {
+    /* Check if an error is detected */
+    if (I2C_IsErrorOccurred(hi2c, Timeout, Tickstart) != HAL_OK)
+    {
+      return HAL_ERROR;
+    }
+
     /* Check for the Timeout */
     if (Timeout != HAL_MAX_DELAY)
     {
